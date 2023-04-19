@@ -1,0 +1,22 @@
+<section id="mainContener">
+    <article>
+        <h1>CALCULER VOTRE IMC</h1>
+        <form [formGroup]="userData">
+            <input type="text" formControlName="userName" placeholder="Votre nom">
+            <label for="tailleInput">Votre taille en cm.</label>
+            <input name="tailleInput" type="number" formControlName="userHeight">
+            <label for="poidsInput">Votre poids en kg</label>
+            <input name="poidsInput" type="number" formControlName="userWeight">
+            <button (click)="submit()">CALCULER IMC</button>
+        </form>
+    </article>
+    <div id="verdictContent" class="masque">
+        <p>Votre nom : {{ userData.value.userName }}</p>
+        <p>Taille : {{ userData.value.userHeight }} cm</p>
+        <p>Poids : {{ userData.value.userWeight }} kg</p>
+        <p>{{ userImc }}</p>
+        <p id="noteVerdict"></p>
+        <img id="imgVerdict" src="" alt="">
+    </div>
+
+</section>

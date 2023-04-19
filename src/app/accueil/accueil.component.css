@@ -1,0 +1,25 @@
+
+#titre{
+    display: flex;
+    align-items: end;
+}
+h1,h3{
+    margin: 5px;
+}
+h3{
+    margin: 20px 0 5px 0;
+
+}
+#titre>h1>span{
+    font-size: 0.5em;
+    font-style: italic;
+    font-weight: lighter;
+}
+ul{
+    list-style:none;
+    padding: 0;
+    margin: 3px;
+}
+#mainContener article>p{
+    margin:2px;
+}

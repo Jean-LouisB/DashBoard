@@ -1,4 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+# Rajout perso
+TD2.mp4
+angular.zip
+favicon.png
 
 # Compiled output
 /dist

@@ -1,0 +1,46 @@
+*{
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+input{
+    margin: 5px 5px 10px 5px;
+    border-radius: 5px;
+    padding:5px;
+}
+button{
+    margin-top: 40px;
+    height: 2em;
+    box-shadow: 2px 2px 5px red;
+}
+#verdictContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    box-shadow: 2px 2px 5px red;
+    width:50%;
+    
+
+}
+.masque{
+    opacity: 0;
+}
+.appear{
+    opacity: 1;
+}
+#verdictContent>p{
+
+    text-align: center;
+}
+#verdictContent>img{
+    max-width: 200px;
+    
+}
