@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-imc',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./imc.component.css']
 })
 export class ImcComponent implements OnInit {
+  
   imc: number = 0
   userImc: string = ''
   userData = new FormGroup(
@@ -17,10 +19,23 @@ export class ImcComponent implements OnInit {
     }
   )
 
-  constructor() { }
+  constructor(private cookieService: CookieService) { }
   ngOnInit(): void {
     console.log('IMC lancé');
-
+    this.createCookie()
+  }
+  createCookie(){
+    var cookiesList= document.cookie.split('; ')
+    var isPresent = false
+    cookiesList.forEach(cookie => {
+      if(cookie.split('=')[0]=='nomCookie'){
+        isPresent = true
+      }
+    });
+    if(!isPresent){
+      this.cookieService.set('nomCookie','Arthur',1)
+    }
+    
   }
 
   submit() {
@@ -31,7 +46,9 @@ export class ImcComponent implements OnInit {
     let imc = (masse / (taille * taille))
     this.imc = masse / (taille * taille)
     this.userImc = `${nom} votre IMC est de ${imc.toFixed(2)}`
-
+    let popo = this.cookieService.get('nomCookie')
+    console.log("popo= "+popo);
+    
     this.verdict(imc)
   }
 

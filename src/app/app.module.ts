@@ -8,6 +8,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { Routes , RouterModule} from '@angular/router';
 import { ImcComponent } from './imc/imc.component';
 import { DeviseComponent } from './devise/devise.component';
+import { CookieService } from 'ngx-cookie-service';
 
 const routes: Routes = [
   {path: 'home' , component: AccueilComponent},
@@ -30,7 +31,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
