@@ -6,15 +6,15 @@
         <form action="">
             <div class="question">
                 <label for="dollars" id="labelDollar">Somme en $ :</label>
-                <input type="number" id="dollars" [formControl]="usd" (blur)="convertFromUSD()">
+                <input type="number" id="dollars" [formControl]="usd" (input)="convertFromUSD()">
             </div>
             <div class="question">
                 <label for="euros" id="labelEuro">Somme en € :</label>
-                <input type="number" id="euros" [formControl]="eur" (blur)="convertFromEUR()">
+                <input type="number" id="euros" [formControl]="eur" (input)="convertFromEUR()">
             </div>
             <div class="question">
                 <label for="yuan" id="labelYuan">Somme en Yuan :</label>
-                <input type="number" id="yuan" [formControl]="yuan" (blur)="convertFromYuan()">
+                <input type="number" id="yuan" [formControl]="yuan" (input)="convertFromYuan()">
             </div>
         </form>
     </article>
