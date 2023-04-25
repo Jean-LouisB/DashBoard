@@ -1,0 +1,83 @@
+<section id="mainContener">
+    <article>
+        <form action="" id="formulaireLuimeme" autocomplete="off" ><!-- novalidate -->
+            <h1>Formulaire d'inscription</h1>
+            <fieldset id="fieldsetIdentite">
+                <legend>Votre identité</legend>
+                <div class="question">
+                    <label for="nom" id="labelNom">Votre nom :</label>
+                    <input type="text" id="nom" name="nom" required pattern="^[A-Za-zà-ï_-]+$">
+                </div>
+                <div class="question">
+                    <label for="prenom" id="labelPrenom">Votre prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required pattern="^[A-Za-zà-ï_-]+$">
+                </div>
+                <div class="question">
+                    <label for="dateNaissance" id="labelDateNaissance">Date de naissance :</label>
+                    <input type="date" id="dateNaissance" name="dateNaissance" required>
+                </div>
+            </fieldset>
+            <fieldset id="fieldUser">
+                <legend>
+                    Utilisateur
+                </legend>
+                <div class="question">
+                    <label for="email" id="labelMail">Votre e-mail :</label>
+                    <input type="email" id="email" name="email" required
+                        pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z0-9._-]{2,}$">
+                </div>
+                <div class="question">
+                    <label for="password" id="labelPassword">Votre mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="question">
+                    <label for="passwordConfirm" id="labelPasswordConfirm">Confirmer votre mot de passe :</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+                </div>
+
+            </fieldset>
+            <fieldset id="fieldAdresse">
+                <legend>Votre adresse</legend>
+                <div class="question" id="inputAdresse">
+                    <label for="adresse" id="labelAdresse">Votre adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+                <div class="question">
+                    <label for="ville" id="labelVille">Ville :</label>
+                    <input type="text" id="ville" name="ville" class="formAutocomplete" required>
+                </div>
+                <div class="question">
+                    <label for="codePostal" id="labelCodePostal">Code postal :</label>
+                    <input type="text" id="codePostal" name="codePostal" class="formAutocomplete" required
+                        pattern="^[0-9]{5}$">
+                </div>
+
+
+            </fieldset>
+            <fieldset id="fieldAutres">
+                <legend>Autres coordonnées</legend>
+
+                <div class="question">
+                    <label for="dprt" id="labelDprt">Département :</label>
+                    <input type="text" id="dprt" name="dprt" class="formAutocomplete" required>
+                </div>
+                <div class="question">
+                    <label for="region" id="labelRegion">Région :</label>
+                    <input type="text" id="region" name="region" class="formAutocomplete" required>
+                </div>
+                <div class="question">
+                    <label for="pays" id="labelPays">Pays :</label>
+                    <input type="text" id="pays" name="pays" class="formAutocomplete" required>
+                </div>
+                <div class="question">
+                    <label for="telephone" id="labelTel">Téléphone :</label>
+                    <input type="text" id="telephone" name="telephone" required>
+                </div>
+
+
+            </fieldset>
+            <button type="submit" id="inscriptionBtn">INSCRIPTION</button>
+
+        </form>
+    </article>
+</section>

@@ -9,11 +9,13 @@ import { Routes , RouterModule} from '@angular/router';
 import { ImcComponent } from './imc/imc.component';
 import { DeviseComponent } from './devise/devise.component';
 import { CookieService } from 'ngx-cookie-service';
+import { InscriptionComponent } from './inscription/inscription/inscription.component';
 
 const routes: Routes = [
   {path: 'home' , component: AccueilComponent},
   {path: 'imc' , component: ImcComponent},
-  {path: 'devises' , component: DeviseComponent}
+  {path: 'devises' , component: DeviseComponent},
+  {path: 'signin' , component: InscriptionComponent}
 ]
 
 
@@ -23,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     AccueilComponent,
     ImcComponent,
-    DeviseComponent
+    DeviseComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
