@@ -10,12 +10,17 @@ import { ImcComponent } from './imc/imc.component';
 import { DeviseComponent } from './devise/devise.component';
 import { CookieService } from 'ngx-cookie-service';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
+import { ListPostComponent } from './list-post/list-post.component';
+import { PostComponent } from './post/post.component';
+import { ModuleBlogModule } from './featModule/module-blog/module-blog.module';
 
 const routes: Routes = [
   {path: 'home' , component: AccueilComponent},
   {path: 'imc' , component: ImcComponent},
   {path: 'devises' , component: DeviseComponent},
-  {path: 'signin' , component: InscriptionComponent}
+  {path: 'signin' , component: InscriptionComponent},
+  {path: 'blog' , component: ListPostComponent},
+  {path: 'newPost' , component: PostComponent}
 ]
 
 
@@ -26,13 +31,16 @@ const routes: Routes = [
     AccueilComponent,
     ImcComponent,
     DeviseComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    ListPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ModuleBlogModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
