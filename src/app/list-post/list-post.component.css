@@ -1,0 +1,24 @@
+.postBlog{
+    margin-bottom: 10px;
+}
+button{
+    width:150px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+.loveIt{
+    display: flex;
+
+}
+.deleteBtnDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+.dontLike{
+    background-color: rgba(255, 0, 0, 0.493);
+}
+.likeIt{
+    background-color: rgba(0, 128, 0, 0.486)
+
+}
