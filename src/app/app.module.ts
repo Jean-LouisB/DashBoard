@@ -11,7 +11,7 @@ import { DeviseComponent } from './devise/devise.component';
 import { CookieService } from 'ngx-cookie-service';
 import { InscriptionComponent } from './inscription/inscription/inscription.component';
 import { ListPostComponent } from './list-post/list-post.component';
-import { PostComponent } from './post/post.component';
+import { NewPostComponent } from './newPost/newPost.component';
 import { ModuleBlogModule } from './featModule/module-blog/module-blog.module';
 
 const routes: Routes = [
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'devises' , component: DeviseComponent},
   {path: 'signin' , component: InscriptionComponent},
   {path: 'blog' , component: ListPostComponent},
-  {path: 'newPost' , component: PostComponent}
+  {path: 'newPost' , component: NewPostComponent}
 ]
 
 
@@ -33,7 +33,7 @@ const routes: Routes = [
     DeviseComponent,
     InscriptionComponent,
     ListPostComponent,
-    PostComponent
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
