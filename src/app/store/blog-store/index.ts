@@ -1,14 +1,12 @@
 import * as fromPostLikeBlog from './blog/post-reducer';
 
 export interface AppState {
-    items: any;
-    filters: any;
-    selectedItems: number;
+    likePost: number;
+    disLikePost: number;
 }
 
 export const reducers = {
-    items: () => {},
-    filters: () => {},
+    //items: () => {},
     likePost: fromPostLikeBlog.likePostReducer,
-    dislikePost: fromPostLikeBlog.dislikePostReducer
+    disLikePost: fromPostLikeBlog.dislikePostReducer
 };

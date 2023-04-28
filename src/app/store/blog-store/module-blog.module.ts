@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { environment } from './../../../environments/environment.prod';
+import { environment } from '../../../environments/environment.prod';
 import { reducers } from '.';
 
 

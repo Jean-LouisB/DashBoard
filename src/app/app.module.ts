@@ -1,28 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { Routes , RouterModule} from '@angular/router';
-import { ImcComponent } from './imc/imc.component';
-import { DeviseComponent } from './devise/devise.component';
+import { AccueilComponent } from './components/home/home.component';
+import { ImcComponent } from './components/imc/imc.component';
+import { DeviseComponent } from './components/convertisseur/convertisseur.component';
 import { CookieService } from 'ngx-cookie-service';
-import { InscriptionComponent } from './inscription/inscription/inscription.component';
-import { ListPostComponent } from './list-post/list-post.component';
-import { NewPostComponent } from './newPost/newPost.component';
-import { ModuleBlogModule } from './featModule/module-blog/module-blog.module';
-
-const routes: Routes = [
-  {path: 'home' , component: AccueilComponent},
-  {path: 'imc' , component: ImcComponent},
-  {path: 'devises' , component: DeviseComponent},
-  {path: 'signin' , component: InscriptionComponent},
-  {path: 'blog' , component: ListPostComponent},
-  {path: 'newPost' , component: NewPostComponent}
-]
-
+import { InscriptionComponent } from './components/user/inscription/inscription.component';
+import { ListPostComponent } from './components/blog/listposts/list-post.component';
+import { NewPostComponent } from './components/blog/newPost/newPost.component';
+import { ModuleBlogModule } from './store/blog-store/module-blog.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { PostComponent } from './components/blog/post/post.component';
 
 
 @NgModule({
@@ -33,11 +23,12 @@ const routes: Routes = [
     DeviseComponent,
     InscriptionComponent,
     ListPostComponent,
-    NewPostComponent
+    NewPostComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     ModuleBlogModule

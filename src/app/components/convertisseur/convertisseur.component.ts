@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ConversionService } from '../services/convertisseur/conversion.service';
+import { ConversionService } from '../../services/convertisseur/conversion.service';
 import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-devise',
-  templateUrl: './devise.component.html',
-  styleUrls: ['./devise.component.css']
+  templateUrl: './convertisseur.component.html',
+  styleUrls: ['./convertisseur.component.css']
 })
 export class DeviseComponent implements OnInit{
    

@@ -1,0 +1,18 @@
+<div class="divBlogPost">
+    <article [ngClass]="{'dontLike' : post.loveIt<0, 'likeIt': post.loveIt>0}" *ngFor="let post of items">
+    <h2>{{post.titre}}</h2>
+    <p>Le {{ post.created_at}}</p>
+    <p>{{post.content}}</p>
+    <div class="loveIt">
+        <button (click)="addLoveIt(post.id)">Love It</button>
+        <button (click)="addDontLove(post.id)">Don't Love It</button>
+        <p>total des appréciations : {{post.loveIt}}</p>
+    </div>
+    <div class="deleteBtnDiv">
+        <button >Delete</button>
+    </div>
+</article>
+</div>
+
+
+

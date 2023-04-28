@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
-  templateUrl: './accueil.component.html',
-  styleUrls: ['./accueil.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class AccueilComponent {
               infoCegefos={
