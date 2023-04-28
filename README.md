@@ -12,3 +12,4 @@ Si les cookies sont présents, la connexion à l'API n'est pas necessaire. l'APP
 Les cookies ont une durée de vie de 24h
 
 ### Ces pages ne sont pas du tout responsives !! 
+...
